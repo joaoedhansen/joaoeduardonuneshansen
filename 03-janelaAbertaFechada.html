@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste de Janela</title>
+    <script>
+        var janelaAberta = null;
+
+        function abrirJanela() {
+            janelaAberta = window.open('', '', 'width=400,height=400');
+        }
+
+        function testarJanela() {
+            if (janelaAberta && janelaAberta.closed) {
+                alert('A janela está fechada');
+            } else if (janelaAberta) {
+                alert('A janela está aberta');
+            } else {
+                alert('A janela não foi aberta');
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="abrirJanela()">Abrir Janela</button>
+    <button onclick="testarJanela()">Testar Janela</button>
+</body>
+</html>

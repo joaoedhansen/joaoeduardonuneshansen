@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela Porcentual</title>
+</head>
+
+<body>
+
+    <h1>Porcentual de Homens e Mulheres</h1>
+
+    <form>
+        <label for="quantidadeHomem">Quantidade de homens:</label>
+        <input type="number" id="quantidadeHomem">
+
+        <br>
+        <br>
+
+        <label for="quantidadeMulher">Quantidade de mulheres:</label>
+        <input type="number" id="quantidadeMulher">
+
+        <br>
+
+        <input type="button" value="Calcular" onclick="calcularPorcentagens()">
+
+        <br>
+        <br>
+    </form>
+
+    <!-- criando a tabela -->
+    <table border="1" id="tabelaResultados">
+
+        <thead> <!--cabeçalho -->
+            <tr>
+                <th>Grupo</th>
+                <th>Quantidade</th>
+                <th>Porcentual (%)</th>
+            </tr>
+        </thead>
+
+        <!-- resultados dos dados obtidos -->
+        <tbody>
+
+        </tbody>
+    </table>
+
+    <script>
+        function calcularPorcentagens() {
+            //passa a quantidade de homens e mulheres para número
+            let quantidadeH = parseInt(document.getElementById('quantidadeHomem').value);
+            let quantidadeM = parseInt(document.getElementById('quantidadeMulher').value);
+
+            //calcula o total de alunos
+            let totalAlunos = quantidadeH + quantidadeM;
+
+            //calcula porcentual de homens e mulheres
+            let porcentualH = (quantidadeH / totalAlunos) * 100;
+            let porcentualM = (quantidadeM / totalAlunos) * 100;
+
+            //cria tabela de porcentagens
+            let tbody = document.getElementById('tabelaResultados').getElementsByTagName('tbody')[0];
+            tbody.innerHTML = `
+                <tr><td>Homens</td><td>${quantidadeH}</td><td>${porcentualH}%</td></tr>
+                <tr><td>Mulheres</td><td>${quantidadeM}</td><td>${porcentualM}%</td></tr>
+            `;
+        }
+    </script>
+</body>
+
+</html>
