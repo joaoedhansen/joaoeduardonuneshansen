@@ -1,0 +1,112 @@
+* { /* retirar bordas brancas do menu */
+    padding: 0;
+    margin: 0;
+}
+
+body { /* para todos elementos do body */
+    background-color: white; /* cor de fundo */
+    font-family: Arial, Helvetica, sans-serif; /* fonte geral dos textos */
+    font-size: 16px; /* tamanho da fonte */
+}
+
+header { /* cabeçalho */
+    display: flex; /* alinhamento */
+    justify-content: center; /* centralizar o menu */
+    position: fixed; /* fixar o menu ao rolar a página */
+    top: 0; /* posiciona no topo da página */
+    width: 100%; /* faz o header ocupar toda a largura da página */
+    background-color: #333333; /* cor de fundo do menu */
+    padding: 25px; /* preenchimento do header */
+} 
+
+main {
+    padding-top: 75px; /* margem no topo */
+    padding-bottom: 20px; /* margem abaixo */
+}
+
+
+.menu {
+    display: flex; /* alinhamento */
+    color: white; /* cor */
+    list-style-type: none; /* remove marcadores da lista */
+    text-decoration: none; /* remove o sublinhado dos links */ 
+    gap: 150px; /* espaçamento entre os links */
+}
+
+.menu a {
+    color: white; /* cor */
+    text-decoration: none; /* remove o sublinhado dos links */ 
+}
+
+.menu a:hover { /* ao passar o cursor em link */
+    cursor: pointer; /* cursor em forma de ponteira */
+    outline: 1px solid white; /* borda branca e sólida */
+}
+
+.containerH {
+    margin: 10px 50px; /* margem de 10px em cima e 50 embaixo */
+    background-color: #F5F5F5; /*cor do container*/
+    margin-bottom: 20px; /* espaçamento para baixo */
+    padding: 20px; /*preenchimento do container */
+}
+
+h1, h2, h3, h4 {
+    display: flex; /* alinhamento */
+    justify-content: center; /* centralizar título */
+    padding: 10px; /* preenchimento */
+    font-size: 25px; /* tamanho da fonte */
+}
+
+.containerP {
+    margin-inline: 25px; /* espaçamento das bordas esquerda e direita */
+}
+
+.letraO { /* letra O de "Olá" */
+    font-size: 20px; /* tamanho da fonte */
+    margin-left: 25px; /* margem para o lado esquerdo */
+}
+
+.containerImg { /* container para as imagens */
+    display: flex; /* deixar imagens lado a lado */
+    justify-content: center; /*centralizar imagens */
+    gap: 15px; /* espaçamento entre as imagens */
+}
+
+img {
+    width: 350px; /* largura */
+    height: 200px; /* altura */
+    margin-top: 40px; /* margem para o topo */
+}
+
+.formacaoList, .portifolioList, .contatoList {
+    list-style-type: disc; /* adiciona marcadores na lista */
+    margin: 0 auto; /* centraliza a lista no contêiner */
+    padding-left: 0; /* remove o preenchimento padrão à esquerda */
+    width: fit-content; /* ajusta a largura da lista para se ajustar ao conteúdo */
+}
+
+.formacaoList li, .portifolioList li, .contatoList {
+    list-style-type: disc; /* adiciona marcadores na lista */
+    margin: 0 auto; /* centraliza a lista no contêiner */
+    padding-left: 0; /* remove o preenchimento padrão à esquerda */
+    width: fit-content; /* ajusta a largura da lista para se ajustar ao conteúdo */
+    padding: 10px; /* espaçamento entre as listas */
+}
+
+ul {
+    padding-left: 10px; /* adiciona espaçamento à esquerda da lista */
+    list-style-type: disc; /* adiciona marcadores aos itens da lista */
+}
+
+ul li {
+    margin-bottom: 10px; /* espaçamento entre os itens da lista */
+}
+
+ul li a {
+    color: blue; /* cor do texto do link */
+    text-decoration: none; /* remove o sublinhado do link */
+}
+
+ul li a:hover {
+    text-decoration: underline; /* adiciona sublinhado ao passar o mouse sobre o link */
+}
